@@ -25,7 +25,8 @@ NEWS_SOURCES = {
         "https://www.sciencemag.org/rss/news_current.xml",
     ]
 }
-
+# Ensure the data directory exists
+os.makedirs("data", exist_ok=True)
 def fetch_news():
     articles = []
     for category, urls in NEWS_SOURCES.items():
@@ -148,12 +149,7 @@ def main():
         analysis = analyze_with_gemini(article)
         article.update(analysis)
         analyzed.append(article)
-    generate_html(articles, analyzed)
-    import os
-
-# Ensure the data directory exists
-os.makedirs("data", exist_ok=True)
-    with open(f"data/news_{datetime.now().strftime('%Y%m%d')}.json", "w") as f:
+    generate_html(articles, analyzed) with open(f"data/news_{datetime.now().strftime('%Y%m%d')}.json", "w") as f:
         json.dump(analyzed, f, indent=2)
 
 if __name__ == "__main__":
