@@ -149,6 +149,10 @@ def main():
         article.update(analysis)
         analyzed.append(article)
     generate_html(articles, analyzed)
+    import os
+
+# Ensure the data directory exists
+os.makedirs("data", exist_ok=True)
     with open(f"data/news_{datetime.now().strftime('%Y%m%d')}.json", "w") as f:
         json.dump(analyzed, f, indent=2)
 
