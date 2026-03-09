@@ -25,8 +25,10 @@ NEWS_SOURCES = {
         "https://www.sciencemag.org/rss/news_current.xml",
     ]
 }
+
 # Ensure the data directory exists
 os.makedirs("data", exist_ok=True)
+
 def fetch_news():
     articles = []
     for category, urls in NEWS_SOURCES.items():
@@ -194,13 +196,13 @@ def generate_html(articles, analyzed):
                 '''
             html += "</div></div>"
     
-    # Placeholder JavaScript (will be replaced later with real feedback handling)
+    # Close the container div
     html += """
         </div>
-            # JavaScript for feedback
+    """
+    
+    # Add JavaScript for feedback (only once!)
     html += """
-        </div>
-
         <script>
         async function sendFeedback(articleId, type) {
             if (typeof GITHUB_TOKEN === 'undefined') {
@@ -221,7 +223,6 @@ def generate_html(articles, analyzed):
             };
 
             try {
-                // Try to fetch existing feedback.json
                 const response = await fetch(repoUrl, { headers });
                 let sha = null;
                 let existingFeedback = [];
@@ -235,17 +236,14 @@ def generate_html(articles, analyzed):
                     throw new Error('Failed to fetch feedback.json');
                 }
 
-                // Add new feedback
                 existingFeedback.push(feedback);
 
-                // Prepare update
                 const updateBody = {
                     message: `Add feedback: ${type} on ${articleId}`,
                     content: btoa(JSON.stringify(existingFeedback, null, 2)),
                     sha: sha
                 };
 
-                // Send update
                 const putResponse = await fetch(repoUrl, {
                     method: 'PUT',
                     headers: headers,
@@ -282,7 +280,7 @@ def main():
         analysis = analyze_with_gemini(article)
         article.update(analysis)
         analyzed.append(article)
-    generate_html(articles, analyzed) 
+    generate_html(articles, analyzed)
     with open(f"data/news_{datetime.now().strftime('%Y%m%d')}.json", "w") as f:
         json.dump(analyzed, f, indent=2)
 
