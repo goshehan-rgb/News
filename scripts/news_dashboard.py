@@ -70,6 +70,16 @@ def analyze_with_gemini(article):
 
 def generate_html(articles, analyzed):
     analyzed_dict = {a["id"]: a for a in analyzed}
+    
+    # Helper for score badge
+    def get_score_badge(score):
+        if score >= 4:
+            return '<span class="badge badge-high">⭐ {}/5</span>'.format(score)
+        elif score >= 3:
+            return '<span class="badge badge-medium">👍 {}/5</span>'.format(score)
+        else:
+            return '<span class="badge badge-low">ℹ️ {}/5</span>'.format(score)
+
     html = f"""
     <!DOCTYPE html>
     <html>
@@ -89,10 +99,37 @@ def generate_html(articles, analyzed):
             .news-card {{ border: 1px solid #eee; border-radius: 8px; padding: 15px; }}
             .importance-high {{ border-left: 4px solid #d93025; }}
             .importance-medium {{ border-left: 4px solid #f9ab00; }}
+            .badge {{
+                padding: 4px 8px;
+                border-radius: 12px;
+                font-size: 0.75em;
+                font-weight: 500;
+            }}
+            .badge-high {{ background: #d93025; color: white; }}
+            .badge-medium {{ background: #f9ab00; color: white; }}
+            .badge-low {{ background: #1e8e3e; color: white; }}
             .source {{ color: #666; font-size: 0.85em; margin-top: 10px; }}
             .why-read {{ color: #1a73e8; font-style: italic; margin: 10px 0; }}
             a {{ color: #333; text-decoration: none; }}
             a:hover {{ color: #1a73e8; }}
+            .feedback-btn {{
+                background: none;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 4px 8px;
+                margin: 0 2px;
+                cursor: pointer;
+                font-size: 0.9em;
+            }}
+            .feedback-btn:hover {{ background: #f0f0f0; }}
+            .feedback-btn.like {{ color: #1e8e3e; }}
+            .feedback-btn.dislike {{ color: #d93025; }}
+            .card-footer {{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+            }}
         </style>
     </head>
     <body>
@@ -102,41 +139,77 @@ def generate_html(articles, analyzed):
                 <div class="date">Updated: {datetime.now().strftime('%B %d, %Y at %I:%M %p')}</div>
             </header>
     """
+    
+    # Important articles (score >= 4)
     important = [a for a in articles if a["id"] in analyzed_dict and analyzed_dict[a["id"]].get("importance", 0) >= 4]
     if important:
         html += '<div class="section"><h2>⭐ Must Read</h2><div class="news-grid">'
         for article in important[:6]:
             analysis = analyzed_dict[article["id"]]
+            score = analysis.get("importance", 5)
+            score_badge = get_score_badge(score)
             html += f'''
-                <div class="news-card importance-high">
-                    <div><strong>{article["title"]}</strong></div>
+                <div class="news-card importance-high" data-article-id="{article["id"]}">
+                    <div style="display: flex; justify-content: space-between;">
+                        <strong>{article["title"]}</strong>
+                        {score_badge}
+                    </div>
                     <div class="why-read">💡 {analysis.get("why_read", "Important")}</div>
-                    <div class="source">📰 {article["source"]}</div>
+                    <div class="card-footer">
+                        <span class="source">{article["source"][:20]}</span>
+                        <div>
+                            <button class="feedback-btn like" onclick="sendFeedback('{article["id"]}', 'like')">👍 Like</button>
+                            <button class="feedback-btn dislike" onclick="sendFeedback('{article["id"]}', 'dislike')">👎 Dislike</button>
+                        </div>
+                    </div>
                 </div>
             '''
         html += "</div></div>"
     
+    # Category sections
     for category in NEWS_SOURCES:
         cat_news = [a for a in articles if a["category"] == category]
         if cat_news:
             html += f'<div class="section"><h2>{category.title()}</h2><div class="news-grid">'
             for article in cat_news[:4]:
                 analysis = analyzed_dict.get(article["id"], {})
-                imp_class = "importance-high" if analysis.get("importance", 0) >= 4 else "importance-medium"
+                score = analysis.get("importance", 3)
+                imp_class = "importance-high" if score >= 4 else "importance-medium"
+                score_badge = get_score_badge(score)
                 html += f'''
-                    <div class="news-card {imp_class}">
-                        <div><strong><a href="{article["url"]}" target="_blank">{article["title"][:80]}...</a></strong></div>
+                    <div class="news-card {imp_class}" data-article-id="{article["id"]}">
+                        <div style="display: flex; justify-content: space-between;">
+                            <strong><a href="{article["url"]}" target="_blank">{article["title"][:80]}...</a></strong>
+                            {score_badge}
+                        </div>
                         <div>{analysis.get("summary", article["summary"][:100])}</div>
-                        <div class="source">{article["source"][:20]}</div>
+                        <div class="card-footer">
+                            <span class="source">{article["source"][:20]}</span>
+                            <div>
+                                <button class="feedback-btn like" onclick="sendFeedback('{article["id"]}', 'like')">👍 Like</button>
+                                <button class="feedback-btn dislike" onclick="sendFeedback('{article["id"]}', 'dislike')">👎 Dislike</button>
+                            </div>
+                        </div>
                     </div>
                 '''
             html += "</div></div>"
     
-    html += "</div></body></html>"
+    # Placeholder JavaScript (will be replaced later with real feedback handling)
+    html += """
+        </div>
+        <script>
+        function sendFeedback(articleId, type) {
+            alert('Feedback: ' + type + ' on ' + articleId + ' (saving will be added later)');
+            // In the next steps, we'll make this actually save your feedback.
+        }
+        </script>
+    </body>
+    </html>
+    """
     
     with open("index.html", "w", encoding='utf-8') as f:
         f.write(html)
-    print("✅ Dashboard generated!")
+    print("✅ Dashboard generated with feedback buttons!")
 
 def main():
     print("📰 Fetching news...")
