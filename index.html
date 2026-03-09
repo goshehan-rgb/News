@@ -17,64 +17,173 @@
             .news-card { border: 1px solid #eee; border-radius: 8px; padding: 15px; }
             .importance-high { border-left: 4px solid #d93025; }
             .importance-medium { border-left: 4px solid #f9ab00; }
+            .badge {
+                padding: 4px 8px;
+                border-radius: 12px;
+                font-size: 0.75em;
+                font-weight: 500;
+            }
+            .badge-high { background: #d93025; color: white; }
+            .badge-medium { background: #f9ab00; color: white; }
+            .badge-low { background: #1e8e3e; color: white; }
             .source { color: #666; font-size: 0.85em; margin-top: 10px; }
             .why-read { color: #1a73e8; font-style: italic; margin: 10px 0; }
             a { color: #333; text-decoration: none; }
             a:hover { color: #1a73e8; }
+            .feedback-btn {
+                background: none;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 4px 8px;
+                margin: 0 2px;
+                cursor: pointer;
+                font-size: 0.9em;
+            }
+            .feedback-btn:hover { background: #f0f0f0; }
+            .feedback-btn.like { color: #1e8e3e; }
+            .feedback-btn.dislike { color: #d93025; }
+            .card-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <header>
                 <h1>📰 My News Dashboard</h1>
-                <div class="date">Updated: March 09, 2026 at 06:16 AM</div>
+                <div class="date">Updated: March 09, 2026 at 07:11 AM</div>
             </header>
     <div class="section"><h2>Tech</h2><div class="news-grid">
-                    <div class="news-card importance-medium">
-                        <div><strong><a href="https://techcrunch.com/2026/03/08/rings-jamie-siminoff-has-been-trying-to-calm-privacy-fears-since-the-super-bowl-but-his-answers-may-not-help/" target="_blank">Ring’s Jamie Siminoff has been trying to calm privacy fears since the Super Bowl...</a></strong></div>
+                    <div class="news-card importance-medium" data-article-id="e751c31308434539343656d14b7475bc">
+                        <div style="display: flex; justify-content: space-between;">
+                            <strong><a href="https://techcrunch.com/2026/03/08/rings-jamie-siminoff-has-been-trying-to-calm-privacy-fears-since-the-super-bowl-but-his-answers-may-not-help/" target="_blank">Ring’s Jamie Siminoff has been trying to calm privacy fears since the Super Bowl...</a></strong>
+                            <span class="badge badge-medium">👍 3/5</span>
+                        </div>
                         <div>The facial recognition question is where things get more tangled.</div>
-                        <div class="source">TechCrunch</div>
+                        <div class="card-footer">
+                            <span class="source">TechCrunch</span>
+                            <div>
+                                <button class="feedback-btn like" onclick="sendFeedback('e751c31308434539343656d14b7475bc', 'like')">👍 Like</button>
+                                <button class="feedback-btn dislike" onclick="sendFeedback('e751c31308434539343656d14b7475bc', 'dislike')">👎 Dislike</button>
+                            </div>
+                        </div>
                     </div>
                 
-                    <div class="news-card importance-medium">
-                        <div><strong><a href="https://techcrunch.com/2026/03/08/palmer-luckeys-retro-gaming-startup-modretro-reportedly-seeks-funding-at-1b-valuation/" target="_blank">Palmer Luckey’s retro gaming startup ModRetro reportedly seeks funding at $1B va...</a></strong></div>
+                    <div class="news-card importance-medium" data-article-id="11df117628d794f4be1d59a2a136bb6f">
+                        <div style="display: flex; justify-content: space-between;">
+                            <strong><a href="https://techcrunch.com/2026/03/08/palmer-luckeys-retro-gaming-startup-modretro-reportedly-seeks-funding-at-1b-valuation/" target="_blank">Palmer Luckey’s retro gaming startup ModRetro reportedly seeks funding at $1B va...</a></strong>
+                            <span class="badge badge-medium">👍 3/5</span>
+                        </div>
                         <div>The company launched its first product, a Game Boy-style handheld device called the Chromatic, in 20</div>
-                        <div class="source">TechCrunch</div>
+                        <div class="card-footer">
+                            <span class="source">TechCrunch</span>
+                            <div>
+                                <button class="feedback-btn like" onclick="sendFeedback('11df117628d794f4be1d59a2a136bb6f', 'like')">👍 Like</button>
+                                <button class="feedback-btn dislike" onclick="sendFeedback('11df117628d794f4be1d59a2a136bb6f', 'dislike')">👎 Dislike</button>
+                            </div>
+                        </div>
                     </div>
                 
-                    <div class="news-card importance-medium">
-                        <div><strong><a href="https://techcrunch.com/2026/03/08/will-the-pentagons-anthropic-controversy-scare-startups-away-from-defense-work/" target="_blank">Will the Pentagon’s Anthropic controversy scare startups away from defense work?...</a></strong></div>
+                    <div class="news-card importance-medium" data-article-id="b1af8d78d32cd9781d0347b95cfa759f">
+                        <div style="display: flex; justify-content: space-between;">
+                            <strong><a href="https://techcrunch.com/2026/03/08/will-the-pentagons-anthropic-controversy-scare-startups-away-from-defense-work/" target="_blank">Will the Pentagon’s Anthropic controversy scare startups away from defense work?...</a></strong>
+                            <span class="badge badge-medium">👍 3/5</span>
+                        </div>
                         <div>On the latest episode of TechCrunch’s Equity podcast, we discussed what the controversy means for ot</div>
-                        <div class="source">TechCrunch</div>
+                        <div class="card-footer">
+                            <span class="source">TechCrunch</span>
+                            <div>
+                                <button class="feedback-btn like" onclick="sendFeedback('b1af8d78d32cd9781d0347b95cfa759f', 'like')">👍 Like</button>
+                                <button class="feedback-btn dislike" onclick="sendFeedback('b1af8d78d32cd9781d0347b95cfa759f', 'dislike')">👎 Dislike</button>
+                            </div>
+                        </div>
                     </div>
                 
-                    <div class="news-card importance-medium">
-                        <div><strong><a href="https://techcrunch.com/2026/03/08/owner-of-ice-detention-facility-sees-big-opportunity-in-ai-man-camps/" target="_blank">Owner of ICE detention facility sees big opportunity in AI man camps...</a></strong></div>
+                    <div class="news-card importance-medium" data-article-id="24aef19b03ac8d222ebf83aca3b528e8">
+                        <div style="display: flex; justify-content: space-between;">
+                            <strong><a href="https://techcrunch.com/2026/03/08/owner-of-ice-detention-facility-sees-big-opportunity-in-ai-man-camps/" target="_blank">Owner of ICE detention facility sees big opportunity in AI man camps...</a></strong>
+                            <span class="badge badge-medium">👍 3/5</span>
+                        </div>
                         <div>AI data center developers are increasingly relying on a style of camp popularized as housing for men</div>
-                        <div class="source">TechCrunch</div>
+                        <div class="card-footer">
+                            <span class="source">TechCrunch</span>
+                            <div>
+                                <button class="feedback-btn like" onclick="sendFeedback('24aef19b03ac8d222ebf83aca3b528e8', 'like')">👍 Like</button>
+                                <button class="feedback-btn dislike" onclick="sendFeedback('24aef19b03ac8d222ebf83aca3b528e8', 'dislike')">👎 Dislike</button>
+                            </div>
+                        </div>
                     </div>
                 </div></div><div class="section"><h2>Science</h2><div class="news-grid">
-                    <div class="news-card importance-medium">
-                        <div><strong><a href="https://www.nature.com/articles/d41586-026-00669-8" target="_blank">Monthly HIV-drug injections offer potent alternative to daily tablets...</a></strong></div>
+                    <div class="news-card importance-medium" data-article-id="240a0ad96077a767ed449a4ef345ad15">
+                        <div style="display: flex; justify-content: space-between;">
+                            <strong><a href="https://www.nature.com/articles/d41586-026-00669-8" target="_blank">Monthly HIV-drug injections offer potent alternative to daily tablets...</a></strong>
+                            <span class="badge badge-medium">👍 3/5</span>
+                        </div>
                         <div><p>Nature, Published online: 08 March 2026; <a href="https://www.nature.com/articles/d41586-026-0066</div>
-                        <div class="source">Nature</div>
+                        <div class="card-footer">
+                            <span class="source">Nature</span>
+                            <div>
+                                <button class="feedback-btn like" onclick="sendFeedback('240a0ad96077a767ed449a4ef345ad15', 'like')">👍 Like</button>
+                                <button class="feedback-btn dislike" onclick="sendFeedback('240a0ad96077a767ed449a4ef345ad15', 'dislike')">👎 Dislike</button>
+                            </div>
+                        </div>
                     </div>
                 
-                    <div class="news-card importance-medium">
-                        <div><strong><a href="https://www.nature.com/articles/d41586-026-00759-7" target="_blank">Briefing chat: What Galileo’s scribbled margin notes reveal about his scientific...</a></strong></div>
+                    <div class="news-card importance-medium" data-article-id="462045cc706557e78efffed06bc407ef">
+                        <div style="display: flex; justify-content: space-between;">
+                            <strong><a href="https://www.nature.com/articles/d41586-026-00759-7" target="_blank">Briefing chat: What Galileo’s scribbled margin notes reveal about his scientific...</a></strong>
+                            <span class="badge badge-medium">👍 3/5</span>
+                        </div>
                         <div><p>Nature, Published online: 06 March 2026; <a href="https://www.nature.com/articles/d41586-026-0075</div>
-                        <div class="source">Nature</div>
+                        <div class="card-footer">
+                            <span class="source">Nature</span>
+                            <div>
+                                <button class="feedback-btn like" onclick="sendFeedback('462045cc706557e78efffed06bc407ef', 'like')">👍 Like</button>
+                                <button class="feedback-btn dislike" onclick="sendFeedback('462045cc706557e78efffed06bc407ef', 'dislike')">👎 Dislike</button>
+                            </div>
+                        </div>
                     </div>
                 
-                    <div class="news-card importance-medium">
-                        <div><strong><a href="https://www.nature.com/articles/d41586-026-00670-1" target="_blank">Electric-vehicle batteries toughen up to beat the heat...</a></strong></div>
+                    <div class="news-card importance-medium" data-article-id="5e76f5bb3f3f9830cc93446715b23ade">
+                        <div style="display: flex; justify-content: space-between;">
+                            <strong><a href="https://www.nature.com/articles/d41586-026-00670-1" target="_blank">Electric-vehicle batteries toughen up to beat the heat...</a></strong>
+                            <span class="badge badge-medium">👍 3/5</span>
+                        </div>
                         <div><p>Nature, Published online: 06 March 2026; <a href="https://www.nature.com/articles/d41586-026-0067</div>
-                        <div class="source">Nature</div>
+                        <div class="card-footer">
+                            <span class="source">Nature</span>
+                            <div>
+                                <button class="feedback-btn like" onclick="sendFeedback('5e76f5bb3f3f9830cc93446715b23ade', 'like')">👍 Like</button>
+                                <button class="feedback-btn dislike" onclick="sendFeedback('5e76f5bb3f3f9830cc93446715b23ade', 'dislike')">👎 Dislike</button>
+                            </div>
+                        </div>
                     </div>
                 
-                    <div class="news-card importance-medium">
-                        <div><strong><a href="https://www.nature.com/articles/d41586-026-00668-9" target="_blank">Peanut-processing microbes ward off dangerous allergic shock...</a></strong></div>
+                    <div class="news-card importance-medium" data-article-id="1a17779be41001cc188b6a9e1f8ca0ca">
+                        <div style="display: flex; justify-content: space-between;">
+                            <strong><a href="https://www.nature.com/articles/d41586-026-00668-9" target="_blank">Peanut-processing microbes ward off dangerous allergic shock...</a></strong>
+                            <span class="badge badge-medium">👍 3/5</span>
+                        </div>
                         <div><p>Nature, Published online: 06 March 2026; <a href="https://www.nature.com/articles/d41586-026-0066</div>
-                        <div class="source">Nature</div>
+                        <div class="card-footer">
+                            <span class="source">Nature</span>
+                            <div>
+                                <button class="feedback-btn like" onclick="sendFeedback('1a17779be41001cc188b6a9e1f8ca0ca', 'like')">👍 Like</button>
+                                <button class="feedback-btn dislike" onclick="sendFeedback('1a17779be41001cc188b6a9e1f8ca0ca', 'dislike')">👎 Dislike</button>
+                            </div>
+                        </div>
                     </div>
-                </div></div></div></body></html>
+                </div></div>
+        </div>
+        <script>
+        function sendFeedback(articleId, type) {
+            alert('Feedback: ' + type + ' on ' + articleId + ' (saving will be added later)');
+            // In the next steps, we'll make this actually save your feedback.
+        }
+        </script>
+    </body>
+    </html>
+    
