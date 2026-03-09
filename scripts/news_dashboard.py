@@ -149,7 +149,8 @@ def main():
         analysis = analyze_with_gemini(article)
         article.update(analysis)
         analyzed.append(article)
-    generate_html(articles, analyzed) with open(f"data/news_{datetime.now().strftime('%Y%m%d')}.json", "w") as f:
+    generate_html(articles, analyzed) 
+    with open(f"data/news_{datetime.now().strftime('%Y%m%d')}.json", "w") as f:
         json.dump(analyzed, f, indent=2)
 
 if __name__ == "__main__":
