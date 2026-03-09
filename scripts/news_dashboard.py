@@ -197,10 +197,70 @@ def generate_html(articles, analyzed):
     # Placeholder JavaScript (will be replaced later with real feedback handling)
     html += """
         </div>
+            # JavaScript for feedback
+    html += """
+        </div>
+
         <script>
-        function sendFeedback(articleId, type) {
-            alert('Feedback: ' + type + ' on ' + articleId + ' (saving will be added later)');
-            // In the next steps, we'll make this actually save your feedback.
+        async function sendFeedback(articleId, type) {
+            if (typeof GITHUB_TOKEN === 'undefined') {
+                alert('Feedback token not configured. Please run the workflow again.');
+                return;
+            }
+
+            const feedback = {
+                articleId: articleId,
+                type: type,
+                timestamp: new Date().toISOString()
+            };
+
+            const repoUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/feedback.json`;
+            const headers = {
+                'Authorization': `token ${GITHUB_TOKEN}`,
+                'Accept': 'application/vnd.github.v3+json'
+            };
+
+            try {
+                // Try to fetch existing feedback.json
+                const response = await fetch(repoUrl, { headers });
+                let sha = null;
+                let existingFeedback = [];
+
+                if (response.ok) {
+                    const data = await response.json();
+                    sha = data.sha;
+                    const content = atob(data.content);
+                    existingFeedback = JSON.parse(content);
+                } else if (response.status !== 404) {
+                    throw new Error('Failed to fetch feedback.json');
+                }
+
+                // Add new feedback
+                existingFeedback.push(feedback);
+
+                // Prepare update
+                const updateBody = {
+                    message: `Add feedback: ${type} on ${articleId}`,
+                    content: btoa(JSON.stringify(existingFeedback, null, 2)),
+                    sha: sha
+                };
+
+                // Send update
+                const putResponse = await fetch(repoUrl, {
+                    method: 'PUT',
+                    headers: headers,
+                    body: JSON.stringify(updateBody)
+                });
+
+                if (putResponse.ok) {
+                    alert('Feedback saved! It will influence future news.');
+                } else {
+                    throw new Error('Failed to save feedback');
+                }
+            } catch (error) {
+                console.error(error);
+                alert('Error saving feedback. Check console.');
+            }
         }
         </script>
     </body>
