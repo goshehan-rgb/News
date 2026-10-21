@@ -1,0 +1,167 @@
+[
+  {
+    "id": "d1819ab5c66e067aabcee821c8b00f4f",
+    "title": "Anthropic pitches AI safety bill that may block a model if 50+ people could be killed",
+    "summary": "The proposed policy seems to offer protections against AI running amok but actually forbids federal ",
+    "url": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
+    "source": "TechCrunch",
+    "published": "Tue, 20 Oct 2026 23:01:23 +0000",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "b01ac18b5757a442ff729a18d939af81",
+    "title": "SpaceX and Tesla boards form special committees to review merger",
+    "summary": "Elon Musk likes the idea but says he is not on either committee, which is made up of independent dir",
+    "url": "https://techcrunch.com/2026/10/20/spacex-and-tesla-boards-form-special-committees-to-review-merger/",
+    "source": "TechCrunch",
+    "published": "Tue, 20 Oct 2026 22:57:57 +0000",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "df88e4093e3a6cc655974620bb5e563b",
+    "title": "Hugging Face CEO warns that Netflix\u2019s OpenAI hack documentary isn\u2019t accurate",
+    "summary": "Before you share the Netflix documentary \"AI Gone Rogue,\" take note. Clem Delangue, Hugging Face's c",
+    "url": "https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate/",
+    "source": "TechCrunch",
+    "published": "Tue, 20 Oct 2026 22:24:02 +0000",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "b14d2c98d7d92c02d8e76c9e60a8de6a",
+    "title": "Anthropic\u2019s cloud partnerships are getting messy",
+    "summary": "Anthropic is reportedly struggling to secure enough compute from cloud providers that increasingly v",
+    "url": "https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/",
+    "source": "TechCrunch",
+    "published": "Tue, 20 Oct 2026 21:25:22 +0000",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "d0ed25b4adb5b94a923995b67b4c1619",
+    "title": "SpaceX\u2019s AI business is beating expectations",
+    "summary": "SpaceX hit profitability in the third quarter, with net income of $4.4 billion. AI was the engine.",
+    "url": "https://techcrunch.com/2026/10/20/spacexs-ai-business-is-beating-expectations/",
+    "source": "TechCrunch",
+    "published": "Tue, 20 Oct 2026 20:40:41 +0000",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "af2a1c71fb174aa2c23e4efcfe360686",
+    "title": "YouTube might be testing hiding the dislike button",
+    "summary": "YouTube appears to be testing hiding the dislike button on videos, as reported by 9to5Google. At lea",
+    "url": "https://www.theverge.com/streaming/1015099/youtube-dislike-button-hide-menu",
+    "source": "The Verge",
+    "published": "2026-10-20T20:00:56-04:00",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "28f03607775f86efd7f260e8dd840705",
+    "title": "Judge dismisses Sam Altman\u2019s sister\u2019s sexual abuse lawsuit",
+    "summary": "On Tuesday, US District Judge Zachary Bluestone dismissed the lawsuit Ann Altman filed last year all",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1014976/sam-altman-ann-altman-lawsuit-dismissed",
+    "source": "The Verge",
+    "published": "2026-10-20T19:04:19-04:00",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "6a897257a5551537e1a9dbe65947538a",
+    "title": "Trump is giving Nick Shirley $10,000 and launching a $25 million fraud bounty program",
+    "summary": "Donald Trump and Vice President JD Vance said on Tuesday that the Trump administration was giving ri",
+    "url": "https://www.theverge.com/news/1014989/trump-fraud-tips-program-nick-shirley-influencers",
+    "source": "The Verge",
+    "published": "2026-10-20T18:20:11-04:00",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "c1e957c841e90215698f1f578bb781b6",
+    "title": "Google\u2019s more personalized Gemini AI is heading to your car",
+    "summary": "Google is bringing Personal Intelligence to Gemini AI in your car. With this update, Gemini in Andro",
+    "url": "https://www.theverge.com/tech/1014999/google-gemini-ai-cars-android-auto",
+    "source": "The Verge",
+    "published": "2026-10-20T18:11:34-04:00",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "e947a3266b35f7980da81bee0bf40578",
+    "title": "Tesla and SpaceX are discussing a possible merger, Musk says",
+    "summary": "Tesla and SpaceX have formed special committees to discuss a possible merger, Elon Musk said during ",
+    "url": "https://www.theverge.com/science/1014984/spacex-tesla-merger-elon-musk-special-committees",
+    "source": "The Verge",
+    "published": "2026-10-20T17:30:24-04:00",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "f4d7da363553d1ae523c527d3b2214e1",
+    "title": "Author Correction: Catalyst-free, microdroplet-mediated waste plastic conversion to diacids",
+    "summary": "<p>Nature, Published online: 21 October 2026; <a href=\"https://www.nature.com/articles/s41586-026-11",
+    "url": "https://www.nature.com/articles/s41586-026-11252-6",
+    "source": "Nature",
+    "published": "",
+    "category": "science",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "b769a8bff2eda861ed194f4583088ee9",
+    "title": "Global emissions slow \u2014 but world hurtles towards 2 \u00b0C of warming",
+    "summary": "<p>Nature, Published online: 21 October 2026; <a href=\"https://www.nature.com/articles/d41586-026-03",
+    "url": "https://www.nature.com/articles/d41586-026-03355-x",
+    "source": "Nature",
+    "published": "",
+    "category": "science",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "2ce4d0cd810ce3890b096352754327ca",
+    "title": "How tech billionaires are disrupting biomedical science",
+    "summary": "<p>Nature, Published online: 21 October 2026; <a href=\"https://www.nature.com/articles/d41586-026-03",
+    "url": "https://www.nature.com/articles/d41586-026-03311-9",
+    "source": "Nature",
+    "published": "",
+    "category": "science",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "66258e9495ae22fbcdb32bed7ec3dcff",
+    "title": "How a new wave of science philanthropists can have the greatest impact",
+    "summary": "<p>Nature, Published online: 21 October 2026; <a href=\"https://www.nature.com/articles/d41586-026-03",
+    "url": "https://www.nature.com/articles/d41586-026-03326-2",
+    "source": "Nature",
+    "published": "",
+    "category": "science",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "87c27659067e56612c989048fdcb0320",
+    "title": "Is it \u2018moon-stroke\u2019, or a chill?",
+    "summary": "<p>Nature, Published online: 20 October 2026; <a href=\"https://www.nature.com/articles/d41586-026-02",
+    "url": "https://www.nature.com/articles/d41586-026-02975-7",
+    "source": "Nature",
+    "published": "",
+    "category": "science",
+    "importance": 3,
+    "why_read": "Interesting read"
+  }
+]
