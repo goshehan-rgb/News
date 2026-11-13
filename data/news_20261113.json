@@ -1,0 +1,167 @@
+[
+  {
+    "id": "de92575e0d508e5ce31bae8df552578d",
+    "title": "Microsoft\u2019s latest email outage turned into a full blown global cloud crisis",
+    "summary": "Microsoft's day-long outage began with Outlook and Teams, and ended up taking much of the company's ",
+    "url": "https://techcrunch.com/2026/11/13/microsoft-latest-email-outage-turned-into-a-full-blown-global-cloud-crisis/",
+    "source": "TechCrunch",
+    "published": "Fri, 13 Nov 2026 13:15:20 +0000",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "eac079c142ed1396f3f2b848cb31aa2d",
+    "title": "Israel\u2019s VCs see opportunity for challengers in Nvidia\u2019s turmoil",
+    "summary": "Given Nvidia\u2019s stronghold on AI and its importance in Israel, many in the country's startup ecosyste",
+    "url": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/",
+    "source": "TechCrunch",
+    "published": "Fri, 13 Nov 2026 12:52:19 +0000",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "a1cf766582ed46f74029a338101da9df",
+    "title": "Jensen Huang didn\u2019t show confidence in his successor, report says",
+    "summary": "Huang described Kress as a \"deer in the headlights\" during a meeting in summer.",
+    "url": "https://techcrunch.com/2026/11/13/jensen-huang-didnt-show-confidence-in-his-successor-report-says/",
+    "source": "TechCrunch",
+    "published": "Fri, 13 Nov 2026 12:28:23 +0000",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "8f90ee80710e8de811a6099b3f064456",
+    "title": "Democrats launch Nvidia investigation, write scathing letter on Huang\u2019s \u2018scheme\u2019 with Trump",
+    "summary": "This Congressional investigation into Nvidia's China sales and its dealings with Trump is the second",
+    "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
+    "source": "TechCrunch",
+    "published": "Thu, 12 Nov 2026 22:42:51 +0000",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "3896780f30628465e8c4b7e7bed7612e",
+    "title": "Muse can now place calls to US businesses \u2014 if you pay",
+    "summary": "Muse's AI can now place outbound calls to U.S. businesses \u2014 but it's not free.",
+    "url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/",
+    "source": "TechCrunch",
+    "published": "Thu, 12 Nov 2026 22:22:28 +0000",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "2c7a6e6b19ce61f9d30efb428e588292",
+    "title": "Claude\u2019s Duet agent is a little neurotic and surprisingly helpful",
+    "summary": "Normally, the products I test don't offer to help me write up my experience with them. Duet is diffe",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+    "source": "The Verge",
+    "published": "2026-11-13T09:00:00-05:00",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "715096a98baf3d21769054ddf859b97a",
+    "title": "Apple should have made the MacBook logo RGB",
+    "summary": "When Apple CEO John Ternus announced the first touchscreen Mac last month, the biggest reaction in t",
+    "url": "https://www.theverge.com/tech/1032550/apple-macbook-pro-proled-xdr-lid-logo-led-rgb-colors",
+    "source": "The Verge",
+    "published": "2026-11-13T08:00:00-05:00",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "806515c3cd0870f39930e2640327cade",
+    "title": "Microsoft&#8217;s massive Outlook outage continues",
+    "summary": "Service is gradually starting to recover for Microsoft Outlook and 365 after an almost two-day outag",
+    "url": "https://www.theverge.com/tech/1032862/microsoft-outlook-down-outage",
+    "source": "The Verge",
+    "published": "2026-11-13T07:48:03-05:00",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "5baea4d15354d4f6d728cffc09748691",
+    "title": "Let\u2019s talk about Jensen Huang\u2019s many affairs!",
+    "summary": "Usually, we'd be offering to answer your questions about a news event, but honestly we don't really ",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032339/lets-talk-about-the-nvidia-shitshow",
+    "source": "The Verge",
+    "published": "2026-11-13T07:00:00-05:00",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "8d537660fd7ab801629dda75c0fed45b",
+    "title": "Donald Trump really wants Tim Cook to run Nvidia",
+    "summary": "Jensen Huang resigned this morning as Nvidia's CEO following reports of affairs, including one with ",
+    "url": "https://www.theverge.com/tech/1032774/president-donald-trump-tim-cook-nvidia-jensen-huang",
+    "source": "The Verge",
+    "published": "2026-11-12T19:46:07-05:00",
+    "category": "tech",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "990ce8bfb886a1b462ebe162d1051856",
+    "title": "Is the climate totally cooked? What the data say",
+    "summary": "<p>Nature, Published online: 13 November 2026; <a href=\"https://www.nature.com/articles/d41586-026-0",
+    "url": "https://www.nature.com/articles/d41586-026-03716-6",
+    "source": "Nature",
+    "published": "",
+    "category": "science",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "2dbb1642deea65b432f90c572369fcba",
+    "title": "Chinese graduate students are now choosing to stay closer to home",
+    "summary": "<p>Nature, Published online: 13 November 2026; <a href=\"https://www.nature.com/articles/d41586-026-0",
+    "url": "https://www.nature.com/articles/d41586-026-03456-7",
+    "source": "Nature",
+    "published": "",
+    "category": "science",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "fabac9eaa41e8b73f8a89d50c82cd329",
+    "title": "Accept all changes",
+    "summary": "<p>Nature, Published online: 13 November 2026; <a href=\"https://www.nature.com/articles/d41586-026-0",
+    "url": "https://www.nature.com/articles/d41586-026-03516-y",
+    "source": "Nature",
+    "published": "",
+    "category": "science",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "9fc80f992a42e20678cf3140c3831494",
+    "title": "Found: a protein that drives ageing without unleashing inflammation",
+    "summary": "<p>Nature, Published online: 12 November 2026; <a href=\"https://www.nature.com/articles/d41586-026-0",
+    "url": "https://www.nature.com/articles/d41586-026-03638-3",
+    "source": "Nature",
+    "published": "",
+    "category": "science",
+    "importance": 3,
+    "why_read": "Interesting read"
+  },
+  {
+    "id": "b9b20329f4147d7aaeba47148724c2f4",
+    "title": "This little brown mushroom is laced with a hallucinogen \u2014 and lethal toxins",
+    "summary": "<p>Nature, Published online: 12 November 2026; <a href=\"https://www.nature.com/articles/d41586-026-0",
+    "url": "https://www.nature.com/articles/d41586-026-03639-2",
+    "source": "Nature",
+    "published": "",
+    "category": "science",
+    "importance": 3,
+    "why_read": "Interesting read"
+  }
+]
